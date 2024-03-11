@@ -5,7 +5,7 @@ const Servicio = ({ icono, titulo, descripcion }) => {
     return (
         <div className="flex flex-col items-center my-5">
             <Icono nombre={icono} color="#49BEB7" tamaño="2x" />
-            <h3 className="text-xl font-extrabold mt-4">{titulo}</h3>
+            <h3 className="text-xl font-bold mt-4">{titulo}</h3>
             <p className="text-center mt-2">{descripcion}</p>
         </div>
     );
