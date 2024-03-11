@@ -1,11 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const Icono = ({ icono, color, tamaño }) => {
-    return (
-      <div style={{ color: color, fontSize: tamaño }}>
-        <FontAwesomeIcon icon={icono} />
-      </div>
-    );
-  }
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faPiggyBank } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faPiggyBank);
+
+const Icono = ({ nombre, color, tamaño }) => {
+  return <FontAwesomeIcon icon={nombre} color={color} size={tamaño} />;
+};
 
 export default Icono;
