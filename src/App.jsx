@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import ImageCard from './components/ImageCard';
 import ImageCard2 from './components/ImageCard2';
 import ListadoServicios from "./components/ListadoServicios";
+import Cta from "./components/Cta";
 const App = () => {
 
   const serviciosData = [
@@ -57,7 +58,9 @@ const App = () => {
         <p className="mt-2 text-lg my-10">Facilitamos la gestión de tus recursos y contribuimos a tu crecimiento económico y personal</p>
         <ListadoServicios servicios={serviciosData} />
       </div>
-
+      <Cta 
+      title="Crea una cuenta en nuestra banca en línea"
+      buttonText="Registrarse"/>
 
     </div>
   );
