@@ -6,7 +6,7 @@ const Testimonial = ({ nombre, cargo, texto, fotoUrl }) => {
       {/* Contenido del lado izquierdo */}
       <div className="flex-shrink-0 w-1/4 text-center">
         <img src={fotoUrl} alt={nombre} className="w-16 h-16 rounded-full mx-auto" />
-        <div className="flex-shrink-0 w-1/2 text-center">
+        <div>
           <p className="text-lg font-bold">{nombre}</p>
           <p className="text-sm">{cargo}</p>
         </div>
