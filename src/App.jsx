@@ -7,23 +7,38 @@ const App = () => {
   const serviciosData = [
     {
       icono: 'fa-piggy-bank',
-      titulo: 'Servicio 1',
-      texto: 'Descripción del Servicio 1...',
+      titulo: 'Cobro de becas',
+      descripcion: 'Cobra tus becas estudiantiles de manera sencilla y eficiente',
+    },
+    {
+      icono: 'fa-money-bill',
+      titulo: 'Depósitos en efectivo',
+      descripcion: 'Realiza depósitos en efectivo de manera sencilla  en cualquiera de nuestras sucursales',
+    },
+    {
+      icono: 'fa-sack-dollar',
+      titulo: 'Retiros en efectivo',
+      descripcion: 'Realiza retiros en efectivo de manera rápida y segura',
     },
     {
       icono: 'fa-piggy-bank',
-      titulo: 'Servicio 2',
-      texto: 'Descripción del Servicio 2...',
+      titulo: 'Cobro de becas',
+      descripcion: 'Cobra tus becas estudiantiles de manera sencilla y eficiente',
     },
     {
-      icono: 'fa-piggy-bank',
-      titulo: 'Servicio 3',
-      texto: 'Descripción del Servicio 3...',
+      icono: 'fa-money-bill',
+      titulo: 'Depósitos en efectivo',
+      descripcion: 'Realiza depósitos en efectivo de manera sencilla  en cualquiera de nuestras sucursales',
+    },
+    {
+      icono: 'fa-sack-dollar',
+      titulo: 'Retiros en efectivo',
+      descripcion: 'Realiza retiros en efectivo de manera rápida y segura',
     },
   ];
   return (
     <div>
-      <Nav/>
+      <Nav />
       <ImageCard
         imageUrl="./src/assets/images/services1.png"
         title="Servicio eficiente"
@@ -36,11 +51,12 @@ const App = () => {
         text="Promover la educación financiera de los estudiantes universitarios, a través de charlas, talleres y capacitaciones sobre temas como el ahorro, la inversión y el uso responsable del crédito"
         buttonText="Conócenos"
       />
-        
-    <div>
-      <h1>Nuestros Servicios</h1>
-      <ListadoServicios servicios={serviciosData} />
-    </div>
+
+      <div className="flex flex-col items-center justify-center">
+        <h2 className="text-5xl font-bold my-10">Descubre nuestros servicios</h2>
+        <p className="mt-2 text-lg my-10">Facilitamos la gestión de tus recursos y contribuimos a tu crecimiento económico y personal</p>
+        <ListadoServicios servicios={serviciosData} />
+      </div>
 
 
     </div>

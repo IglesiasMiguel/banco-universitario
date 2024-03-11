@@ -2,7 +2,7 @@ import React from 'react';
 import Servicio from './Servicio';
 const ListadoServicios = ({ servicios }) => {
   return (
-    <div>
+    <div className="grid grid-cols-3 mx-40">
       {servicios.map((servicio, index) => (
         <Servicio
           key={index}
