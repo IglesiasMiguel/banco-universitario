@@ -1,6 +1,7 @@
 import Nav from "./components/Nav";
 import ImageCard from './components/ImageCard';
 import ImageCard2 from './components/ImageCard2';
+import ListadoServicios from "./components/ListadoServicios";
 const App = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const App = () => {
         text="Promover la educación financiera de los estudiantes universitarios, a través de charlas, talleres y capacitaciones sobre temas como el ahorro, la inversión y el uso responsable del crédito"
         buttonText="Conócenos"
       />
+      <ListadoServicios/>
     </div>
   );
 };
