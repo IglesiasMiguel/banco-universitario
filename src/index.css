@@ -9,3 +9,9 @@ body {
     font-family: 'Montserrat Alternates', sans-serif; /* Fuente de los títulos */
     color: #111827; /* Color de los títulos */
   }
+  .bg-primary-color {
+    background-color: #49BEB7;
+  }
+  .text-primary-color {
+    color: #49BEB7;
+  }

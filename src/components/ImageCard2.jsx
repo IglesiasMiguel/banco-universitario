@@ -13,7 +13,7 @@ const ImageCard2 = ({ imageUrl, title, text, buttonText}) => {
           <p className="mt-2 text-lg">{text}</p>
   
           {/* Botón con icono */}
-          <button className="mt-4 font-bold text-teal-400 py-2 rounded-md flex items-center">
+          <button className="mt-4 font-bold text-primary-color py-2 rounded-md flex items-center">
             <span>{buttonText}</span>
             <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
