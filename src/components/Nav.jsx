@@ -8,6 +8,7 @@ import Boton from './Boton';
 const Nav = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
   const content = <>
     <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-[#49beb7] transition">
       <ul className="text-center text-x1 p-20">
@@ -51,10 +52,10 @@ const Nav = () => {
           </div>
         </div>
 
-        <dix className="flex items-center flex-1 justify-end space-x-4">
+        <div className="flex items-center flex-1 justify-end space-x-4">
           <Boton buttonText="Iniciar Sesión" buttonColor="primary-color" buttonHoverColor="teal-700" colorText="secondary-color"/>
           <Boton buttonText="Registrarse" buttonColor="secondary-color" buttonHoverColor="teal-700" colorText="primary-color"/>
-        </dix>
+        </div>
         
         <div>
           {click && content}
