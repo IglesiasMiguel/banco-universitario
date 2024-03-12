@@ -4,6 +4,8 @@ import ImageCard2 from './components/ImageCard2';
 import ListadoServicios from "./components/ListadoServicios";
 import Cta from "./components/Cta";
 import Testimonial from "./components/Testimonial";
+import Footer from "./components/Footer";
+
 const App = () => {
 
   const serviciosData = [
@@ -68,6 +70,8 @@ const App = () => {
       title="Crea una cuenta en nuestra banca en línea"
       buttonText="Registrarse"/>
 
+      <Footer />
+      
     </div>
   );
 };

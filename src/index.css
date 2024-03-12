@@ -12,6 +12,15 @@ body {
   .bg-primary-color {
     background-color: #49BEB7;
   }
+  .bg-secondary-color {
+    background-color: #c9ecea;
+  }
+  .bg-black-color {
+    background-color: #000000;
+  }
   .text-primary-color {
     color: #49BEB7;
+  }
+  .text-secondary-color {
+    color: #FFF;
   }
