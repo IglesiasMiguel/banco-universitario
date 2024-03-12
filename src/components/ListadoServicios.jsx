@@ -1,5 +1,6 @@
 import React from 'react';
 import Servicio from './Servicio';
+
 const ListadoServicios = ({ servicios }) => {
   return (
     <div className="grid grid-cols-3 mx-40">
@@ -14,4 +15,5 @@ const ListadoServicios = ({ servicios }) => {
     </div>
   );
 }
+
 export default ListadoServicios;
