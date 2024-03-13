@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        MontserratRegular: ["Montserrat-Regular", "Roboto", "arial", "sans", "sans-serif"],
+        MontserratMedium: ["Montserrat-Medium", "Roboto", "arial", "sans", "sans-serif"],
+        MontserratSemiBold: ["Montserrat-SemiBold", "Roboto", "arial", "sans", "sans-serif"],
+        MontserratBold: ["Montserrat-Bold", "Roboto", "arial", "sans", "sans-serif"],
+        MontserratBlack: ["Montserrat-Black", "Roboto", "arial", "sans", "sans-serif"],
+      }
+    },
   },
   plugins: [],
 }
