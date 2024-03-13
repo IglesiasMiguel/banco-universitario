@@ -33,7 +33,7 @@ const Nav = () => {
   return (
     <nav className="sticky top-0 lg:py-3 px-20 py-3 bg-white">
       <header>
-        <div className="h-10 flex justify-between z-50 text-black ">
+        <div className="h-20 flex justify-between z-50 text-black ">
           <div className="flex items-center flex-1">
             <img src={logo} width={250} height={250} alt="Logo" />
           </div>
