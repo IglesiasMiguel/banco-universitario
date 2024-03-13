@@ -4,6 +4,7 @@ import logo from "../assets/images/logo-no-background.png";
 import { Link } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
+import Boton from './Boton';
 
 const Nav = () => {
   
@@ -54,6 +55,13 @@ const Nav = () => {
               </ul>
             </div>
           </div>
+
+          <div className="flex items-center flex-1 justify-end space-x-4">
+            <Boton buttonText="Iniciar Sesión" buttonColor="primary-color" buttonHoverColor="teal-700" colorText="white"/>
+            <Boton buttonText="Registrarse" buttonColor="secondary-color" buttonHoverColor="teal-700" colorText="primary-color"/>
+          </div>
+
+
           <div>
             {click && content}
           </div>
