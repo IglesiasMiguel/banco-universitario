@@ -33,7 +33,7 @@ const Nav = () => {
   return (
     <nav className="sticky top-0 lg:py-3 px-20 py-3 bg-white z-10">
       <header>
-        <div className="h-10 flex justify-between z-50 text-black ">
+        <div className="h-20 flex justify-between z-50 text-black ">
           <div className="flex items-center flex-1">
             <img src={logo} width={250} height={250} alt="Logo" />
           </div>
@@ -47,8 +47,10 @@ const Nav = () => {
                   <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Servicios</li>
                 </LinkRouter>
                 <Link spy={true} smooth={true} to="Nosotros">
-                  <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Nosotros</li>
                 </Link>
+                <LinkRouter /*spy={true} smooth={true} to="/contact" */ to="/about-us">
+                  <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Nosotros</li>
+                </LinkRouter>
                 <LinkRouter /*spy={true} smooth={true} to="/contact" */ to="/contact">
                   <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Contacto</li>
                 </LinkRouter>

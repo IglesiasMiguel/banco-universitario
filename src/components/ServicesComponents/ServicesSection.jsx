@@ -1,12 +1,51 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 
 import Carousel from "./Carousel";
 
 import dataServicesDescription from "../../data/dataServicesDescription";
 
-const ServicesSection = () => {
+const initialState = 0;
 
-  const [index, setIndex] = useState(0);
+const indexReducer = (state, action) => {
+  switch (action.type) {
+    case "NEXT":
+      return state === dataServicesDescription.length - 1
+        ? 0
+        : state + 1;
+    case "PREV":
+      return state === 0
+        ? dataServicesDescription.length - 1
+        : state - 1; 
+    case "SET_INDEX":
+      return action.payload
+    default:
+      return state;
+  }
+};
+
+const ServicesSection = () => {
+  
+  const [index, dispatch] = useReducer(indexReducer, initialState);
+
+  const autoSlide = false;
+  const [autoSlideClick, setAutoSlideClick] = useState(true);
+
+  const nextService = () => {
+    (autoSlide && autoSlideClick) && setAutoSlideClick(false);
+    dispatch({ type: "NEXT" });
+  };
+
+  const prevService = () => {
+    (autoSlide && autoSlideClick) && setAutoSlideClick(false);
+    dispatch({ type: "PREV" });
+  };
+
+  const setIndex = (newIndex) => {
+    dispatch({
+      type: "SET_INDEX",
+      payload: newIndex
+    });
+  }
 
   return (
     <div
@@ -48,7 +87,10 @@ const ServicesSection = () => {
       >
         <Carousel
           index={index}
-          autoSlide={true}
+          autoSlide={autoSlide}
+          autoSlideClick={autoSlideClick}
+          prev={prevService}
+          next={nextService}
         >
           {[...dataServicesDescription.map((item, i) => (
             <div
