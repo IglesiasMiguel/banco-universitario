@@ -46,8 +46,6 @@ const Nav = () => {
                 <LinkRouter /*spy={true} smooth={true} to="Servicios"*/ to="/services">
                   <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Servicios</li>
                 </LinkRouter>
-                <Link spy={true} smooth={true} to="Nosotros">
-                </Link>
                 <LinkRouter /*spy={true} smooth={true} to="/contact" */ to="/about-us">
                   <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Nosotros</li>
                 </LinkRouter>
