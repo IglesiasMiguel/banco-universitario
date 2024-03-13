@@ -9,9 +9,9 @@ const Contact = () => {
   return (
     <div
       id="Contacto"
-      className="grid md:grid-cols-2 grid:cols-1 md:space-x-6" 
+      className="grid md:grid-cols-3 grid:cols-3 md:space-x-6" 
     >
-      <div id="contact-form" className="md:ml-[10rem] md:mr-[2rem] flex flex-col items-center md:items-start mt-[4rem]">
+      <div id="contact-form" className="md:ml-[10rem] md:mr-[2rem] col-span-2 items-center md:items-start mt-[4rem]">
         <h2 className="xl:text-6xl lg:text-5xl xs:text-6xl text-4xl md:text-3xl font-extrabold text-center md:text-start my-10 leading-smug uppercase">
           Contáctanos y aclara tus dudas
         </h2>
@@ -21,7 +21,7 @@ const Contact = () => {
 
       <div
         id="data-bank"
-        className="bg-[#ebecf0] py-10 md:mr-20 md:pl-10 flex flex-col md:items-end items-center justify-center space-y-8"
+        className="bg-[#ebecf0] py-10 md:mr-20 md:pl-10 col-span-1 md:items-end items-center justify-center space-y-8"
       >
 
         <Subtitle
