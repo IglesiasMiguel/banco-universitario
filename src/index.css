@@ -27,6 +27,9 @@ h6 {
 .bg-secondary-color {
   background-color: #c9ecea;
 }
+.bg-ternary-color {
+  background-color: #085f63;
+}
 .text-primary-color {
   color: #49BEB7;
 }
