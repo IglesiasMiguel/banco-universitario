@@ -4,7 +4,7 @@ import logoImage from '../assets/images/banco-universitario-website-favicon-colo
 
 const Footer = () => {
   return (
-    <footer className="bg-black-color text-white py-8 px-20">
+    <footer className="bg-black text-white py-8 px-20">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between">
           <div className="mb-4 md:mb-0">

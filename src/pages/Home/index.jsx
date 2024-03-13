@@ -6,6 +6,7 @@ import ImageCard from "../../components/ImageCard";
 import ImageCard2 from "../../components/ImageCard2";
 import Testimonial from "../../components/Testimonial";
 import Cta from "../../components/Cta";
+import Footer from "../../components/Footer"
 
 import dataServices from "../../data/dataServices";
 
@@ -40,6 +41,7 @@ const HomePage = () => {
         title="Crea una cuenta en nuestra banca en línea"
         buttonText="Registrarse"
       />
+      <Footer />
     </div>
   );
 };
