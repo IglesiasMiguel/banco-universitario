@@ -7,17 +7,16 @@ import ImageCard2 from "../../components/ImageCard2";
 import Testimonial from "../../components/Testimonial";
 import Cta from "../../components/Cta";
 import Footer from "../../components/Footer"
-import Hero from "../../components/Hero";
+import Hero2 from "../../components/Hero2";
 import dataServices from "../../data/dataServices";
 
 const HomePage = () => {
   return (
     <div>
       <Nav />
-      <Hero 
-        imageUrl="./src/assets/images/services1.png"
-        title="Conoce los servicios de Banco Univertario"
-        text="Transferencias entre estudiantes sin comisión, depósitos 24/7, retiros rápidos y seguros, matrículas pagadas en línea, y becas cobradas de manera eficiente. ¡Conectamos tu educación con servicios financieros ágiles!"
+      <Hero2 
+        imageUrl="./src/assets/images/hero-home.png"
+        title="Crece profesional y económicamente"
         buttonText="Contactar"
       />
       <div className="flex flex-col items-center justify-center">
