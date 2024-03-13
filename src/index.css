@@ -24,9 +24,12 @@ h6 {
 .bg-primary-color {
   background-color: #49BEB7;
 }
+.text-primary-color {
+  color: #49BEB7;
+}
 .bg-secondary-color {
   background-color: #c9ecea;
 }
-.text-primary-color {
-  color: #49BEB7;
+.bg-ternary-color {
+  background-color: #085f63;
 }
