@@ -1,5 +1,6 @@
 import React from 'react';
 import Boton from './Boton';
+import { Link as LinkRouter, useLocation } from "react-router-dom";
 const Hero2 = ({ imageUrl, title}) => {
     return (
         <div className="grid grid-cols-1 gap-4 m-10 items-center justify-center">
@@ -7,12 +8,15 @@ const Hero2 = ({ imageUrl, title}) => {
           <div className="text-center mx-auto">
             <h1 className="text-5xl font-bold my-4">{title}</h1>
             <div className="inline-block float-center my-4">
-            <Boton
-              buttonText="Contactar"
-              buttonColor="primary-color"
-              buttonHoverColor="teal-700"
-              colorText="white"
-            />
+            <LinkRouter to="/contact">
+              <Boton
+                buttonText="Contactar"
+                buttonColor="primary-color"
+                buttonHoverColor="teal-700"
+                colorText="white"
+              />
+            </LinkRouter>
+            
             </div>
           </div>
           {/* Imagen */}
