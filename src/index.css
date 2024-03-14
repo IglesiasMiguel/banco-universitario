@@ -48,6 +48,10 @@ h6 {
 .text-primary-color {
   color: #49BEB7;
 }
+
+.border-primary-color {
+  border-color: #49BEB7;
+}
 .bg-secondary-color {
   background-color: #c9ecea;
 }
