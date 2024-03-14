@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link as LinkRouter } from "react-router-dom";
+import { Link as LinkRouter, useLocation } from "react-router-dom";
 import logo from "../assets/images/logo-no-background.png";
 import { Link } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
@@ -7,28 +7,34 @@ import { CiMenuFries } from "react-icons/ci";
 import Boton from './Boton';
 
 const Nav = () => {
-  
+  const location = useLocation();
+  const [currentPage, setCurrentPage] = useState(location.pathname);
   const [click, setClick] = useState(false);
+
   const handleClick = () => setClick(!click);
 
-  const content = <>
+  const handleLinkClick = (path) => {
+    setCurrentPage(path);
+  };
+
+  const content = (
     <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-[#49beb7] transition">
       <ul className="text-center text-x1 p-20">
         <Link spy={true} smooth={true} to="Home">
-          <li className="my-4 py-4 border-b border-[#004b4f] hover:bg-[#004b4f] hover:rounded">Home</li>
+          <li className={`my-4 py-4 border-b border-[#004b4f] hover:bg-[#004b4f] hover:rounded ${currentPage === "/" ? "border-primary-color" : ""}`} onClick={() => handleLinkClick("/")}>Home</li>
         </Link>
         <Link spy={true} smooth={true} to="Servicios">
-          <li className="my-4 py-4 border-b border-[#004b4f] hover:bg-[#004b4f] hover:rounded">Servicios</li>
+          <li className={`my-4 py-4 border-b border-[#004b4f] hover:bg-[#004b4f] hover:rounded ${currentPage === "/services" ? "border-primary-color" : ""}`} onClick={() => handleLinkClick("/services")}>Servicios</li>
         </Link>
         <Link spy={true} smooth={true} to="Nosotros">
-          <li className="my-4 py-4 border-b border-[#004b4f] hover:bg-[#004b4f] hover:rounded">Nosotros</li>
+          <li className={`my-4 py-4 border-b border-[#004b4f] hover:bg-[#004b4f] hover:rounded ${currentPage === "/about-us" ? "border-primary-color" : ""}`} onClick={() => handleLinkClick("/about-us")}>Nosotros</li>
         </Link>
         <Link /*spy={true} smooth={true} to="/contact" */href="/contact">
-          <li className="my-4 py-4 border-b border-[#004b4f] hover:bg-[#004b4f] hover:rounded">Contacto</li>
+          <li className={`my-4 py-4 border-b border-[#004b4f] hover:bg-[#004b4f] hover:rounded ${currentPage === "/contact" ? "border-primary-color" : ""}`} onClick={() => handleLinkClick("/contact")}>Contacto</li>
         </Link>
       </ul>
     </div>
-  </>
+  );
 
   return (
     <nav className="sticky top-0 lg:py-3 px-20 py-3 bg-white z-10">
@@ -40,17 +46,17 @@ const Nav = () => {
           <div className="lg:flex md:flex lg:flex-1 items center font-normal hidden pt-2">
             <div className="flex-10">
               <ul className="flex gap-8 mr-16 text-[18px]">
-                <LinkRouter /*spy={true} smooth={true} to="Home"*/ to="/" >
-                  <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Home</li>
+                <LinkRouter to="/" >
+                  <li className={`hover:text-[#49beb7] transition hover:border-[#49beb7] cursor-pointer ${currentPage === "/" ? "border-b-2 border-primary-color" : ""}`} onClick={() => handleLinkClick("/")}>Home</li>
                 </LinkRouter>
-                <LinkRouter /*spy={true} smooth={true} to="Servicios"*/ to="/services">
-                  <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Servicios</li>
+                <LinkRouter to="/services">
+                  <li className={`hover:text-[#49beb7] transition hover:border-[#49beb7] cursor-pointer ${currentPage === "/services" ? "border-b-2 border-primary-color" : ""}`} onClick={() => handleLinkClick("/services")}>Servicios</li>
                 </LinkRouter>
-                <LinkRouter /*spy={true} smooth={true} to="/contact" */ to="/about-us">
-                  <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Nosotros</li>
+                <LinkRouter to="/about-us">
+                  <li className={`hover:text-[#49beb7] transition hover:border-[#49beb7] cursor-pointer ${currentPage === "/about-us" ? "border-b-2 border-primary-color" : ""}`} onClick={() => handleLinkClick("/about-us")}>Nosotros</li>
                 </LinkRouter>
-                <LinkRouter /*spy={true} smooth={true} to="/contact" */ to="/contact">
-                  <li className="hover:text-[#49beb7] transition border-b-2 border-slate-900 hover:border-[#49beb7] cursor-pointer">Contacto</li>
+                <LinkRouter to="/contact">
+                  <li className={`hover:text-[#49beb7] transition hover:border-[#49beb7] cursor-pointer ${currentPage === "/contact" ? "border-b-2 border-primary-color" : ""}`} onClick={() => handleLinkClick("/contact")}>Contacto</li>
                 </LinkRouter>
               </ul>
             </div>
@@ -61,10 +67,9 @@ const Nav = () => {
               <Boton buttonText="Iniciar Sesión" buttonColor="primary-color" buttonHoverColor="teal-700" colorText="white" />
             </LinkRouter>
             <LinkRouter to="/SignUp">
-            <Boton buttonText="Registrarse" buttonColor="secondary-color" buttonHoverColor="teal-700" colorText="primary-color"/>
+              <Boton buttonText="Registrarse" buttonColor="secondary-color" buttonHoverColor="teal-700" colorText="primary-color"/>
             </LinkRouter>
           </div>
-
 
           <div>
             {click && content}
