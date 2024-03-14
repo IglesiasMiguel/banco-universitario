@@ -42,7 +42,7 @@ const HomePage = () => {
         nombre="Miguel Iglesias"
         cargo="Estudiante UCLA"
         texto="El Banco Universitario ha sido mi aliado financiero desde que ingresé a la universidad. Su enfoque en brindar soluciones financieras ágiles y eficientes realmente se refleja en la forma en que facilitan la gestión de mis recursos. La opción de transferencias entre estudiantes sin comisión ha simplificado mis transacciones, y la posibilidad de realizar depósitos y retiros en efectivo las 24 horas del día ha sido increíblemente conveniente."
-        fotoUrl="./src/assets/images/services2.png"
+        fotoUrl="./src/assets/images/miguel.jpg"
       />
       <Cta
         title="Crea una cuenta en nuestra banca en línea"

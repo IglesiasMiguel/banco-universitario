@@ -53,7 +53,7 @@ const ServicesSection = () => {
     >
       <div
         id="servicesName"
-        className="grid md:grid-cols-2 xs:grid-cols-1 justify-center items-center mx-[5rem] pt-[5rem] md:w-3/5 xs:w-full"
+        className="grid md:grid-cols-2 xs:grid-cols-1 justify-center items-center mx-[5rem] pt-[5rem] md:w-4/6 xs:w-full"
       >
         {dataServicesDescription.map((item, i) => (
           <div
@@ -83,7 +83,7 @@ const ServicesSection = () => {
       </div>
       <div
         id="serviceCarousel"
-        className="md:w-2/5 w-[100%]"
+        className="md:w-2/6 w-[100%]"
       >
         <Carousel
           index={index}

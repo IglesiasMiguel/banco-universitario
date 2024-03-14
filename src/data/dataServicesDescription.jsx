@@ -22,7 +22,7 @@ const dataServicesDescription = [
       efectivo de manera rápida y segura. Los estudiantes pueden realizar retiros en cualquiera 
       de las sucursales del banco, con la tranquilidad de que sus fondos están seguros y 
       protegidos.`,
-    image: "./src/assets/images/cajero.jpg"
+    image: "./src/assets/images/cajero.png"
   },
   {
     title: "Pago de matrícula",

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as LinkRouter, useLocation } from "react-router-dom";
 
 const ImageCard2 = ({ imageUrl, title, text, buttonText, showIcon}) => {
   return (
@@ -13,12 +14,14 @@ const ImageCard2 = ({ imageUrl, title, text, buttonText, showIcon}) => {
         <p className="mt-2 text-lg">{text}</p>
 
         {showIcon && (
-        <button className="mt-4 font-bold text-primary-color py-2 rounded-md flex items-center">
-          <span>{buttonText}</span>
-          <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+        <LinkRouter to="/about-us" >
+          <button className="mt-4 font-bold text-primary-color py-2 rounded-md flex items-center">
+            <span>{buttonText}</span>
+            <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </LinkRouter>
     )}
       {!showIcon && (
         <button className="mt-4 font-bold text-primary-color py-2 rounded-md">

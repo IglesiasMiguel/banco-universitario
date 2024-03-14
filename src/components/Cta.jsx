@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as LinkRouter, useLocation } from "react-router-dom";
 
 const CTA = ({ title, buttonText }) => {
   return (
@@ -6,9 +7,11 @@ const CTA = ({ title, buttonText }) => {
       <h2 className="text-3xl font-extrabold my-10 text-center">
         {title}
       </h2>
-      <button className="bg-primary-color hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
-        {buttonText}
-      </button>
+      <LinkRouter to="/signUp" >
+        <button className="bg-primary-color hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
+          {buttonText}
+        </button>
+      </LinkRouter>
     </div>
   );
 };

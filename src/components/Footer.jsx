@@ -15,16 +15,13 @@ const Footer = () => {
             <div className="flex flex-col items-center md:items-start space-y-1 md:space-y-0 md:ml-4">
               <p className="text-lg font-bold text-white mb-1">Nuestras redes</p>
               <div className="flex items-center space-x-4">
-                <a href="#" className="text-white hover:text-teal-300">
+                <a href="facebook.com/bancouniversitariove" target="_blank" className="text-white hover:text-teal-300">
                   <FaFacebook className="text-3xl mt-2" />
                 </a>
-                <a href="#" className="text-white hover:text-teal-300">
+                <a href="x.com/bancouniversitariove" target="_blank" className="text-white hover:text-teal-300">
                   <FaTwitter className="text-3xl mt-2" />
                 </a>
-                <a href="#" className="text-white hover:text-teal-300">
-                  <FaLinkedin className="text-3xl mt-2" />
-                </a>
-                <a href="#" className="text-white hover:text-teal-300">
+                <a href="instagram.com/bancouniversitariove" target="_blank" className="text-white hover:text-teal-300">
                   <FaInstagram className="text-3xl mt-2" />
                 </a>
               </div>
