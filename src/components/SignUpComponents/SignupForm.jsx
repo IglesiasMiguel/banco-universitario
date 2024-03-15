@@ -86,26 +86,6 @@ const SignupForm = () => {
             </div>
             <div className="col-span-1" style={{ width: '350px' }}>
               <Input
-                type="email"
-                id="email"
-                title="Correo electrónico"
-                placeholder="Ingrese su correo electrónico"
-                value={email}
-                onChange={handleEmailChange}
-              />
-            </div>
-            <div>
-              <Input
-                type="text"
-                id="phone"
-                title="Teléfono"
-                placeholder="Ingrese su teléfono"
-                value={phone}
-                onChange={handlePhoneChange}
-              />
-            </div>
-            <div className="col-span-1" style={{ width: '350px' }}>
-              <Input
                 type="text"
                 id="idDocument"
                 title="Documento de identidad"
@@ -115,7 +95,12 @@ const SignupForm = () => {
               />
             </div>
             <div className="col-span-1" style={{ width: '350px' }}>
-              <DateInput/>
+              <DateInput
+                id="birthdate"
+                title="Fecha de nacimiento"
+                selected={birthdate}
+                onChange={handleBirthdateChange}
+              />
             </div>
             <div className="col-span-1" style={{ width: '350px' }}>
               <Input
@@ -135,6 +120,26 @@ const SignupForm = () => {
                 placeholder="Confirme su contraseña"
                 value={confirmPassword}
                 onChange={handleConfirmPasswordChange}
+              />
+            </div>
+            <div className="col-span-1" style={{ width: '350px' }}>
+              <Input
+                type="email"
+                id="email"
+                title="Correo electrónico"
+                placeholder="Ingrese su correo electrónico"
+                value={email}
+                onChange={handleEmailChange}
+              />
+            </div>
+            <div>
+              <Input
+                type="text"
+                id="phone"
+                title="Teléfono"
+                placeholder="Ingrese su teléfono"
+                value={phone}
+                onChange={handlePhoneChange}
               />
             </div>
           </div>

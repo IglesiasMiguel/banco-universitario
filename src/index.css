@@ -58,3 +58,17 @@ h6 {
 .bg-ternary-color {
   background-color: #085f63;
 }
+.react-datepicker__view-calendar-icon input {
+  width: 350px;
+  height: 59px;
+}
+.react-datepicker__input-container {
+  position: relative;
+}
+.react-datepicker__input-container {
+  display: flex;
+  align-items: center;
+}
+.react-datepicker__calendar-icon {
+  filter: invert(90%) sepia(10%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}

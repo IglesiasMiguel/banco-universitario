@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="text-sm text-gray-300">
+        <div className="text-sm text-gray-300 my-8">
         <div className="flex-10">
               <ul className=" mt-2 flex gap-8 mr-16 text-[18px]">
                 <LinkRouter to="/services">
