@@ -115,12 +115,7 @@ const SignupForm = () => {
               />
             </div>
             <div className="col-span-1" style={{ width: '350px' }}>
-              <DateInput
-                id="birthdate"
-                title="Fecha de nacimiento"
-                selected={birthdate}
-                onChange={handleBirthdateChange}
-              />
+              <DateInput/>
             </div>
             <div className="col-span-1" style={{ width: '350px' }}>
               <Input

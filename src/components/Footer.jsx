@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import logoImage from '../assets/images/banco-universitario-website-favicon-color.png';
+import { Link as LinkRouter } from "react-router-dom";
+import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -28,8 +30,27 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 text-sm text-gray-300">
-          <p>&copy; 2024 Banco Universitario. Todos los derechos reservados.</p>
+        <div className="text-sm text-gray-300">
+        <div className="flex-10">
+              <ul className=" mt-2 flex gap-8 mr-16 text-[18px]">
+                <LinkRouter to="/services">
+                  <p className='text-sm'>
+                    <li>Servicios</li>
+                  </p>
+                </LinkRouter>
+                <LinkRouter to="/about-us">
+                  <p className='text-sm'>
+                    <li>Nosotros</li>
+                  </p>
+                </LinkRouter>
+                <LinkRouter to="/contact">
+                  <p className='text-sm'>
+                    <li>Contacto</li>
+                  </p>
+                </LinkRouter>
+              </ul>
+            </div>
+          <p className='mt-8'>&copy; 2024 Banco Universitario. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
