@@ -41,7 +41,9 @@ const Nav = () => {
       <header>
         <div className="h-20 flex justify-between z-50 text-black ">
           <div className="flex items-center flex-1">
-            <img src={logo} width={250} height={250} alt="Logo" />
+            <LinkRouter to="/" >
+              <img src={logo} width={250} height={250} alt="Logo" />
+            </LinkRouter>
           </div>
           <div className="lg:flex md:flex lg:flex-1 items center font-normal hidden pt-2">
             <div className="flex-10">
