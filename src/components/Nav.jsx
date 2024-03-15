@@ -45,7 +45,7 @@ const Nav = () => {
               <img src={logo} width={250} height={250} alt="Logo" />
             </LinkRouter>
           </div>
-          <div className="lg:flex md:flex lg:flex-1 items center font-normal hidden pt-2">
+          <div className="lg:flex md:flex lg:flex-1 items-center font-normal hidden pt-2">
             <div className="flex-10">
               <ul className="flex gap-8 mr-16 text-[18px]">
                 <LinkRouter to="/" >
