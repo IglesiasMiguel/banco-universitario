@@ -12,6 +12,7 @@ import StyledArea from "./StyledArea";
 
 import useLoading from "../../hooks/useLoading";
 import useToast from "../../hooks/useToast";
+import { sendCustomEmail } from "../../utils/email";
 
 const ContactForm = () => {
 
@@ -29,6 +30,7 @@ const ContactForm = () => {
     defaultValues: contactFormDefaultValues
   });
 
+
   const onSubmit = async (values) => {
     startLoading();
     try {
@@ -39,10 +41,24 @@ const ContactForm = () => {
         return;
       }
 
-      showSuccessToast("El mensaje fue enviado con éxito.");
-      reset();
+      const res = await sendCustomEmail({
+        toEmail: values.email,
+        fromName: values.name,
+        fromPhone: values.phone,
+        subject: "Consulta",
+        message: `${values.message}\n\n${values.phone}\n${values.email}`
+      });
 
-      console.info(values);
+      if (res) {
+        showSuccessToast("El mensaje fue enviado con éxito.");
+        reset();
+  
+        console.info(values);
+
+        return;
+      }
+
+      showErrorToast("El mensaje no pudo ser enviado, intente más tarde.");
 
     } catch (error) {
       console.error(error);
@@ -148,7 +164,9 @@ const ContactForm = () => {
         className="w-full flex flex-col items-end"
       >
         <SubmitButton
-          label="Enviar mensaje"
+          isLoading={isLoading}
+          disabled={isLoading}
+          label={isLoading ? "Enviando" : "Enviar mensaje"}
           type="submit"
         />
       </div>
