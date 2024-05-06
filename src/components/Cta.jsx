@@ -7,7 +7,7 @@ const CTA = ({ title, buttonText }) => {
       <h2 className="text-3xl font-extrabold my-10 text-center">
         {title}
       </h2>
-      <LinkRouter to="/signUp" >
+      <LinkRouter to="http://localhost:8000/sign-up" >
         <button className="bg-primary-color hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
           {buttonText}
         </button>
