@@ -65,10 +65,10 @@ const Nav = () => {
           </div>
 
           <div className="flex items-center flex-1 justify-end space-x-4">
-            <LinkRouter to="/LogIn"> 
+            <LinkRouter to="http://localhost:8000"> 
               <Boton buttonText="Iniciar Sesión" buttonColor="primary-color" buttonHoverColor="teal-700" colorText="white" />
             </LinkRouter>
-            <LinkRouter to="/SignUp">
+            <LinkRouter to="http://localhost:8000/sign-up">
               <Boton buttonText="Registrarse" buttonColor="secondary-color" buttonHoverColor="teal-700" colorText="primary-color"/>
             </LinkRouter>
           </div>
